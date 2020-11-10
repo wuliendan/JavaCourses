@@ -60,7 +60,7 @@ public class HttpInboundServer {
 
         int port = Integer.parseInt(proxyPort);
         System.out.println(GATEWAY_NAME + " " + GATEWAY_VERSION + " starting...");
-        com.lh.learning.gateway.inbound.HttpInboundServer server = new com.lh.learning.gateway.inbound.HttpInboundServer(port, proxyServer);
+        HttpInboundServer server = new HttpInboundServer(port, proxyServer);
         System.out.println(GATEWAY_NAME + " " + GATEWAY_VERSION + " started at http://localhost:" + port + " for server:" + proxyServer);
 
         try {
