@@ -43,7 +43,7 @@
     </bean>
 
     <!-- 定义数据源，使用自己实现的数据源 -->
-    <bean id="dataSource" class="com.lh.mysql.config.DynamicDataSource" >
+    <bean id="dataSource" class="com.lh.mysql.separation1.config.DynamicDataSource" >
         <!-- 设置多个数据源 -->
         <property name="targetDataSources" >
             <map key-type="java.lang.String" >
@@ -80,7 +80,7 @@
     </tx:advice>
 
     <!-- 定义AOP切面处理器 -->
-    <bean class="com.lh.mysql.aop.DataSourceAspect" id="dataSourceAspect">
+    <bean class="com.lh.mysql.separation1.aop.DataSourceAspect" id="dataSourceAspect">
 <!--        <aop:config>-->
 <!--            &lt;!&ndash; 定义切面，所有的service的所有方法 &ndash;&gt;-->
 <!--            <aop:pointcut id="txPointcut" expression="execution(* com.lh.mysql.service.*.*(..))"/>-->

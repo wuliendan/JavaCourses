@@ -1,4 +1,4 @@
-package com.lh.mysql.dynamic;
+package com.lh.mysql.separation1.dynamic;
 
 import lombok.Data;
 
@@ -28,7 +28,6 @@ public class DynamicDataSourceHolder {
     }
 
     public static boolean isMaster() {
-
 
         return false;
     }

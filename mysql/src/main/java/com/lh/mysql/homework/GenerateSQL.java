@@ -8,30 +8,31 @@ import java.util.UUID;
 
 public class GenerateSQL {
 
-    private static String path = "E:\\Program\\Learing\\JavaTraining\\Course";
+    private static String path = "E:\\Program\\Learing\\JavaTraining\\Course\\";
     private static String filenameTemp;
     private static String[] uuidList = new String[1000000];
 
     public static void main(String[] args) throws IOException {
         uuidList = getUUID(1000000);
         generateUser();
-        generateUserAddress();
-        generateProductCompany();
-        generateProduct();
-        generateModel();
-        generateSeller();
-        generateOrder();
-        generateOrderDetail();
+//        generateUserAddress();
+//        generateProductCompany();
+//        generateProduct();
+//        generateModel();
+//        generateSeller();
+//        generateOrder();
+//        generateOrderDetail();
     }
 
     private static void generateUser() throws IOException {
-        createTxtFile("user");
+        createTxtFile("user_info");
         Date date = new Date();
         Timestamp timestamp = new Timestamp(date.getTime());
 
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < 1000 * 1000; i++) {
-            str.append(randomStr(4)).append(", 123456, ").append(getTel()).append(", 男, 2020").append(timestamp).append("\r\n");
+            str.append(i + 1).append(",").append(randomStr(4)).append(",123456,").append(getTel()).append(",男,")
+                    .append(getPrice(18)).append(",").append(timestamp).append(",").append(timestamp).append(",").append(timestamp).append("\r\n");
         }
 
         System.out.println(str);

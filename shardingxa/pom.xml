@@ -9,13 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lh</groupId>
-    <artifactId>mysql</artifactId>
+    <artifactId>shardingxa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mysql</name>
+    <name>shardingxa</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <hikari-cp.version>3.4.2</hikari-cp.version>
     </properties>
 
     <dependencies>
@@ -30,42 +31,29 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.jolbox/bonecp -->
-        <dependency>
-            <groupId>com.jolbox</groupId>
-            <artifactId>bonecp</artifactId>
-            <version>0.7.1.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>5.2.7.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.10</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>shardingsphere-jdbc-core</artifactId>
             <version>5.0.0-alpha</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-transaction-core</artifactId>
+            <version>5.0.0-alpha</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${hikari-cp.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

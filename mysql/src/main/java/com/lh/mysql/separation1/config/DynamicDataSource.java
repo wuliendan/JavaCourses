@@ -1,6 +1,6 @@
-package com.lh.mysql.config;
+package com.lh.mysql.separation1.config;
 
-import com.lh.mysql.dynamic.DynamicDataSourceHolder;
+import com.lh.mysql.separation1.dynamic.DynamicDataSourceHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.util.ReflectionUtils;

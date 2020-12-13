@@ -9,13 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lh</groupId>
-    <artifactId>mysql</artifactId>
+    <artifactId>shardingjdbc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mysql</name>
+    <name>shardingjdbc</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <sharding-sphere.version>5.0.0-alpha</sharding-sphere.version>
     </properties>
 
     <dependencies>
@@ -30,42 +31,22 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.jolbox/bonecp -->
         <dependency>
-            <groupId>com.jolbox</groupId>
-            <artifactId>bonecp</artifactId>
-            <version>0.7.1.RELEASE</version>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core</artifactId>
+            <version>${sharding-sphere.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>5.2.7.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.10</version>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.2</version>
         </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>shardingsphere-jdbc-core</artifactId>
-            <version>5.0.0-alpha</version>
-        </dependency>
-
     </dependencies>
 
     <build>

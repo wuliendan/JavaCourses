@@ -1,6 +1,6 @@
-package com.lh.mysql.aop;
+package com.lh.mysql.separation1.aop;
 
-import com.lh.mysql.dynamic.DynamicDataSourceHolder;
+import com.lh.mysql.separation1.dynamic.DynamicDataSourceHolder;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.springframework.cache.interceptor.NameMatchCacheOperationSource;
